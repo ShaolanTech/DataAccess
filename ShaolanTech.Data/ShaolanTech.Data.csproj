@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk"> 
+  <PropertyGroup>
+	  <TargetFrameworks>netstandard2.0;net5.0;net6.0;net7.0</TargetFrameworks>
+  </PropertyGroup> 
+  <ItemGroup>
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="7.0.0" />
+  </ItemGroup> 
+  <ItemGroup>
+    <ProjectReference Include="..\..\BaseLib\ShaolanTech.BaseModels\ShaolanTech.BaseModels.csproj" />
+    <ProjectReference Include="..\..\BaseLib\ShaolanTech.Extensions.Common\ShaolanTech.Extensions.Common.csproj" />
+  </ItemGroup> 
+</Project>

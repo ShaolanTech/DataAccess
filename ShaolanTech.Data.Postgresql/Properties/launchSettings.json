@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "ShaolanTech.Data.Postgresql": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:57333;http://localhost:57336"
+    }
+  }
+}
