@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 using ShaolanTech.Threading;
 namespace ShaolanTech.Data.ManticoreSearch
 {
+    /// <summary>
+    /// useless class
+    /// </summary>
     internal class PushStreamWriter
     {
         private ByteLimitDualChannel reader;
