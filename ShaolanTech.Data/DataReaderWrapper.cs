@@ -56,6 +56,23 @@ namespace ShaolanTech.Data
 
             return result;
         }
+        public IEnumerable<T> AsIEnumerable<T>(Func<T> convertCallback)
+        {
+            while (this.Read())
+            {
+                T r = default(T);
+                try
+                {
+                    r = convertCallback();
+                }
+                catch (Exception ex)
+                {
+
+                    throw;
+                }
+                yield return r;
+            }
+        }
         public T ReadObject<T>(int index)
         {
             return this.DataReader.GetFieldValue<T>(index);
