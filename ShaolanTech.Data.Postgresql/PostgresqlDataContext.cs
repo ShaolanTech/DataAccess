@@ -60,6 +60,20 @@ namespace ShaolanTech.Data.Postgresql
             Npgsql.NpgsqlConnection.GlobalTypeMapper.UseJsonNet();
             this.mappingProvider = pgMappingProvider;
         }
+        public PostgresqlDataContext(string host,int port,string dbName,string userName,string password) : base(new NpgsqlConnectionStringBuilder()
+        {
+            Host = host,
+            Port = port,
+            Database = dbName,
+            Username =userName,
+            Password = password,
+            Timeout = 300,
+            CommandTimeout = 3000
+        }.ConnectionString, Npgsql.NpgsqlFactory.Instance)
+        {
+            Npgsql.NpgsqlConnection.GlobalTypeMapper.UseJsonNet();
+            this.mappingProvider = pgMappingProvider;
+        }
         public async Task<ResultInfo<int>> ExecuteNonQueryV2Async(string commandText, params object[] values)
         {
             var p = this.CreatePositionalParameterCollection();
